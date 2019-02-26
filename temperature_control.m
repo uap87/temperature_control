@@ -20,5 +20,3 @@ for clock=1:clockmax
     plot(0,0,'r*',xsave,ysave)
     drawnow
 end
-%plot(0,0,'r*',xsave,ysave)
-%drawnow

@@ -1,15 +1,15 @@
-% % Orbit 1: Control
-% G=6.673889E-11; % m^3 kg^-1 s^-2
-% Ms=1.9891E30; % kg
-% Rs=696000000; % m
-% tempS=5800;
-% x=149597870000; % m regular
-% y=0; % m
-% U=0; % m/s
-% V=29788; % m/s regular
-% tmax=1; % s
-% clockmax=317; % steps
-% dt=100000/tmax;
+% Orbit 1: Control
+G=6.673889E-11; % m^3 kg^-1 s^-2
+Ms=1.9891E30; % kg
+Rs=696000000; % m
+tempS=5800;
+x=149597870000; % m regular
+y=0; % m
+U=0; % m/s
+V=29788; % m/s regular
+tmax=1; % s
+clockmax=317; % steps
+dt=100000/tmax;
 
 % % Orbit 2: Velocity Increases
 % G=6.673889E-11; % m^3 kg^-1 s^-2
@@ -64,18 +64,18 @@
 % clockmax=317; % steps
 % dt=100000/tmax;
 
-% Orbit 6: * 1/3
-G=6.673889E-11; % m^3 kg^-1 s^-2
-Ms=1.9891E30; % kg
-Rs=696000000; % m
-tempS=5800;
-x=9.97319E10; % m regular
-y=0; % m
-U=0; % m/s
-V=42115; % m/s regular
-tmax=1; % s
-clockmax=317; % steps
-dt=100000/tmax;
+% % Orbit 6: * 1/3
+% G=6.673889E-11; % m^3 kg^-1 s^-2
+% Ms=1.9891E30; % kg
+% Rs=696000000; % m
+% tempS=5800;
+% x=9.97319E10; % m regular
+% y=0; % m
+% U=0; % m/s
+% V=42115; % m/s regular
+% tmax=1; % s
+% clockmax=317; % steps
+% dt=100000/tmax;
 
 % % Orbit Experiment: * 1/12
 % G=6.673889E-11; % m^3 kg^-1 s^-2

@@ -1,15 +1,15 @@
-% % Orbit 1: Control
-% G=6.673889E-11; % m^3 kg^-1 s^-2
-% Ms=1.9891E30; % kg
-% Rs=696000000; % m
-% tempS=5800;
-% x=149597870000; % m regular
-% y=0; % m
-% U=0; % m/s
-% V=29788; % m/s regular
-% tmax=1; % s
-% clockmax=317; % steps
-% dt=100000/tmax;
+% Orbit 1: Control
+G=6.673889E-11; % m^3 kg^-1 s^-2
+Ms=1.9891E30; % kg
+Rs=696000000; % m
+tempS=5800;
+x=149597870000; % m regular
+y=0; % m
+U=0; % m/s
+V=29788; % m/s regular
+tmax=1; % s
+clockmax=317; % steps
+dt=100000/tmax;
 
 % % Orbit 2: Velocity Increases
 % G=6.673889E-11; % m^3 kg^-1 s^-2
@@ -24,7 +24,7 @@
 % clockmax=451; % steps
 % dt=100000/tmax;
 
-% % Orbit IGNORE: Velocity Increases
+% % Orbit 3: Velocity Decreases
 % G=6.673889E-11; % m^3 kg^-1 s^-2
 % Ms=1.9891E30; % kg
 % Rs=696000000; % m
@@ -32,25 +32,13 @@
 % x=149597870000; % m regular
 % y=0; % m
 % U=0; % m/s
-% V=29788*1.05; % m/s regular
+% V=29788*0.9; % m/s regular
 % tmax=1; % s
-% clockmax=400; % steps
+% clockmax = 245; % steps
 % dt=100000/tmax;
 
-% Orbit 3: Velocity Decreases
-G=6.673889E-11; % m^3 kg^-1 s^-2
-Ms=1.9891E30; % kg
-Rs=696000000; % m
-tempS=5800;
-x=149597870000; % m regular
-y=0; % m
-U=0; % m/s
-V=29788*0.9; % m/s regular
-tmax=1; % s
-clockmax = 245; % steps
-dt=100000/tmax;
+% Energy stays Constant
 
-% Energy stays Constant Half
 % % Orbit 4: * 1/6
 % G=6.673889E-11; % m^3 kg^-1 s^-2
 % Ms=1.9891E30; % kg
@@ -90,43 +78,12 @@ dt=100000/tmax;
 % clockmax=317; % steps
 % dt=100000/tmax;
 
-% % Orbit Experiment: * 1/12
-% G=6.673889E-11; % m^3 kg^-1 s^-2
-% Ms=1.9891E30; % kg
-% Rs=696000000; % m
-% tempS=5800;
-% x=1.37131E11; % m regular
-% y=0; % m
-% U=0; % m/s
-% V=32373; % m/s regular
-% tmax=1; % s
-% clockmax=317; % steps
-% dt=100000/tmax;
-
-% G=6.673889E-11; % m^3 kg^-1 s^-2
-% Ms=1.9891E30; % kg
-% Rs=696000000; % m
-% tempS=5800;
-% % x=1.2466E11; % ellipse 1
-% x=149597870000; % m regular
-% y=0; % m
-% U=0; % m/s
-% % V=35235; % ellipse 1
-% V=29788*1.2; % m/s regular
-% % V=24122; % m/s velocity of mars
-% tmax=1; % s
-% clockmax=317; % steps
-% % clockmax=100000; % steps
-% dt=100000/tmax;
 xsave=zeros(1,clockmax);
 ysave=zeros(1,clockmax);
 tsave=zeros(1,clockmax);
 tempEsave = zeros(1,clockmax);
 total_temp=0;
 for clock=1:clockmax
-%     if y<0
-%         clock
-%     end
     R=sqrt(x^2+y^2);
     U=U-dt*G*Ms*x/R^3;
     V=V-dt*G*Ms*y/R^3;
